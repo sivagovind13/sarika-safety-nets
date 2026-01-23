@@ -1,67 +1,67 @@
-:root {
-    --primary-color: #0d6efd;
-    --dark-navy: #111827;
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--dark-navy);
+  margin: 0;
+  padding-top: 70px;
 }
-
-h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; }
-
-/* NAVBAR */
-.navbar-brand { font-size: 1.5rem; letter-spacing: -1px; }
 
 /* HERO */
-.hero-box { min-height: 70vh; display: flex; align-items: center; }
-.main-hero-img { border-radius: 30px !important; }
-
-.floating-badge {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.hero {
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+              url("images/hero.jpg") center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
-/* SERVICE CARDS */
-.service-card {
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.3s ease;
+/* SECTIONS */
+.section {
+  padding: 80px 0;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.card-img-wrap {
-    height: 200px;
-    overflow: hidden;
+.about-text {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  font-size: 17px;
+  color: #444;
 }
 
-.card-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* SERVICES DARK */
+.services-dark {
+  background: #000;
+  color: #fff;
+  padding: 70px 40px;
 }
 
-.divider {
-    width: 50px;
-    height: 4px;
-    background: var(--primary-color);
-    margin-top: 10px;
+.services-dark h4 {
+  color: #00ff7f;
+  margin-bottom: 15px;
 }
 
-/* BUTTONS */
-.btn-success { background-color: #25D366; border: none; }
-.btn-primary { padding: 10px 25px; font-weight: 600; }
+.services-dark ul {
+  list-style: none;
+  padding: 0;
+}
 
-/* MAP BOX */
-.map-container { border: 5px solid #fff; }
+.services-dark ul li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+}
