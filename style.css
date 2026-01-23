@@ -1,109 +1,90 @@
 :root {
-    --primary-color: #0d6efd;
-    --dark-navy: #0a192f;
-    --text-gray: #555e69;
-    --bg-light: #f8f9fa;
+    --primary-color: #0078ff;
+    --dark-navy: #111827;
+    --bg-light: #f9fafb;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     color: var(--dark-navy);
+    background-color: #ffffff;
 }
 
-h1, h2, h3, .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
-}
+h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; }
 
-.py-100 { padding: 100px 0; }
+.py-100 { padding: 80px 0; }
 
-/* TOP BAR */
-.top-bar {
-    background: var(--dark-navy);
-    color: rgba(255,255,255,0.7);
-    padding: 8px 0;
-    font-size: 0.85rem;
-}
-
-/* NAVBAR */
-.navbar-brand { font-size: 1.5rem; letter-spacing: -1px; }
-.nav-link { transition: 0.3s; }
+/* NAVBAR CUSTOM */
+.navbar { transition: 0.3s ease; }
+.nav-link { font-size: 0.95rem; color: #4b5563 !important; }
 .nav-link:hover { color: var(--primary-color) !important; }
 
-/* HERO SECTION */
-.hero-wrap {
-    background: linear-gradient(90deg, #fff 30%, rgba(255,255,255,0) 100%), 
-                url('https://images.unsplash.com/photo-1590060417650-ebddb3e8c236?auto=format&fit=crop&w=1600&q=80'); /* Replace with your image */
-    background-size: cover;
-    background-position: center right;
+/* HERO DESIGN */
+.hero-box { min-height: 80vh; display: flex; align-items: center; }
+
+.hero-image-frame img {
+    border-radius: 40px;
+    border: 10px solid #fff;
+    transform: rotate(2deg);
 }
 
-.bg-primary-soft { background-color: #e7f0ff; }
-
-/* SERVICE BOXES */
-.service-box {
-    padding: 40px;
+.floating-badge {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
     background: #fff;
-    border: 1px solid #eee;
-    transition: all 0.4s ease;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-2deg);
+}
+
+/* SERVICE CARDS (The Wix Look) */
+.service-card {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-img-wrap {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img-wrap img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-.service-box:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    transform: translateY(-5px);
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12) !important;
 }
 
-.icon-circle {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-color);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    border-radius: 4px;
-}
-
-.divider {
-    width: 60px;
-    height: 4px;
-    background: var(--primary-color);
-    margin-top: 15px;
-}
-
-/* FLOATING ACTION */
-.floating-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-}
-
-.call-fab {
-    width: 60px;
-    height: 60px;
-    background: #28a745;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    text-decoration: none;
+.service-card:hover .card-img-wrap img {
+    transform: scale(1.1);
 }
 
 /* BUTTONS */
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
-    font-weight: 700;
-    letter-spacing: 1px;
+    padding: 12px 28px;
+    font-weight: 600;
 }
 
-.btn-outline-dark {
-    border-width: 2px;
-    font-weight: 700;
+.btn-dark {
+    background-color: var(--dark-navy);
+    padding: 12px 28px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-box { text-align: center; }
+    .hero-image-frame img { transform: rotate(0); margin-bottom: 30px; }
+    .floating-badge { left: 50%; transform: translateX(-50%); }
 }
