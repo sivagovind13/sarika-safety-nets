@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SARIKA SAFETY NETS | Safety Nets Installation</title>
 
-<meta name="description" content="SARIKA SAFETY NETS provides Balcony, Bird, Construction, Sports & Safety Nets with professional installation.">
+<title>SARIKA SAFETY NETS | Professional Safety Net Solutions</title>
+
+<meta name="description" content="Balcony, Bird, Construction & Sports Safety Nets with professional installation. SARIKA SAFETY NETS.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- 🔐 SECURITY HEADERS -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin">
+<meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self' https: data:;
+img-src 'self' https: data:;
+style-src 'self' https: 'unsafe-inline';
+script-src 'self' https: 'unsafe-inline'">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,103 +52,80 @@
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
+  <div class="overlay"></div>
+  <div class="hero-text">
     <h1>Trusted Safety Net Solutions</h1>
-    <p>Balcony • Bird • Construction • Sports Safety Nets</p>
-    <a href="tel:9663511196" class="btn btn-warning">📞 Call Now</a>
-    <a href="https://wa.me/919663511196" class="btn btn-success ms-2">💬 WhatsApp</a>
+    <p>Balcony • Bird • Construction • Sports Nets</p>
+    <div class="hero-buttons">
+      <a href="tel:9663511196" class="btn call-btn">📞 Call Now</a>
+      <a href="https://wa.me/919663511196" class="btn whatsapp-btn">💬 WhatsApp</a>
+    </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="container my-5">
-  <h2 class="section-title">Our Services</h2>
+<section id="services" class="services-section">
+  <h2>Our Services</h2>
 
-  <div class="row g-4">
-
-    <div class="col-md-4">
-      <div class="service-card">
-        <img src="images/balcony.jpg" alt="Balcony Safety Nets">
-        <h4>Balcony Safety Nets</h4>
-        <p>Child & pet safety with strong balcony net installation.</p>
-      </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="images/balcony.jpg">
+      <h4>Balcony Safety Nets</h4>
+      <p>Strong & reliable safety for kids and pets.</p>
     </div>
 
-    <div class="col-md-4">
-      <div class="service-card">
-        <img src="images/bird.jpg" alt="Bird Protection Nets">
-        <h4>Bird Protection Nets</h4>
-        <p>Anti-bird nets & pigeon control solutions.</p>
-      </div>
+    <div class="service-card">
+      <img src="images/bird.jpg">
+      <h4>Bird Protection Nets</h4>
+      <p>Anti-bird & pigeon control solutions.</p>
     </div>
 
-    <div class="col-md-4">
-      <div class="service-card">
-        <img src="images/construction.jpg" alt="Construction Safety Nets">
-        <h4>Construction Safety Nets</h4>
-        <p>High-rise & building construction safety nets.</p>
-      </div>
+    <div class="service-card">
+      <img src="images/construction.jpg">
+      <h4>Construction Safety Nets</h4>
+      <p>Fall protection for construction sites.</p>
     </div>
 
-    <div class="col-md-4">
-      <div class="service-card">
-        <img src="images/sports.jpg" alt="Sports Practice Nets">
-        <h4>Sports Practice Nets</h4>
-        <p>Cricket & sports nets for grounds & terraces.</p>
-      </div>
+    <div class="service-card">
+      <img src="images/sports.jpg">
+      <h4>Sports Practice Nets</h4>
+      <p>Cricket & sports practice nets.</p>
     </div>
 
-    <div class="col-md-4">
-      <div class="service-card">
-        <img src="images/invisible.jpg" alt="Invisible Grills">
-        <h4>Invisible Grills</h4>
-        <p>Modern invisible grills for balconies & windows.</p>
-      </div>
+    <div class="service-card">
+      <img src="images/invisible.jpg">
+      <h4>Invisible Grills</h4>
+      <p>Modern invisible grills for balconies.</p>
     </div>
-
   </div>
 </section>
 
 <!-- LOCATION -->
-<section id="location" class="location-section">
-  <div class="container">
-    <h2>Our Location</h2>
+<section id="location" class="location">
+  <h2>Our Location</h2>
+  <p>📍 <strong>Opposite Company</strong></p>
 
-    <p class="mt-3">
-      📍 <strong>Opposite Company</strong><br>
-      Click below for directions
-    </p>
+  <a href="https://maps.app.goo.gl/bGvt1BjPqgvdcbkf8?g_st=awb" target="_blank" class="btn map-btn">
+    📍 Get Directions
+  </a>
 
-    <a href="https://maps.app.goo.gl/bGvt1BjPqgvdcbkf8?g_st=awb"
-       target="_blank"
-       class="btn btn-light mb-4">
-      📍 Get Directions
-    </a>
-
-    <div class="map-box">
-      <iframe
-        src="https://www.google.com/maps?q=12.9716,77.5946&z=15&output=embed"
-        width="100%"
-        height="300"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=12.9716,77.5946&z=15&output=embed"
+      loading="lazy">
+    </iframe>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p><strong>Phone:</strong> +91 9663511196</p>
-  <p><strong>Email:</strong>
-    <a href="mailto:charankare91@gmail.com">charankare91@gmail.com</a>
-  </p>
+  <p>📞 +91 9663511196</p>
+  <p>📧 <a href="mailto:charankare91@gmail.com">charankare91@gmail.com</a></p>
 </section>
 
 <footer>
-  © 2026 SARIKA SAFETY NETS. All Rights Reserved.
+© 2026 SARIKA SAFETY NETS. All Rights Reserved.
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
