@@ -1,80 +1,52 @@
-/* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* BASE */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin-top: 70px;
-    background: #f8f9fa;
+    font-family: Arial, sans-serif;
 }
 
-/* HERO / BANNER */
 .hero {
-    background: linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1593698054469-2bb6fdf0c5c2");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to right, #198754, #0a3622);
     color: white;
-    padding: 140px 20px;
+    padding: 130px 20px;
+}
+
+.section {
+    padding: 70px 20px;
+}
+
+.section h2 {
+    font-weight: bold;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 44px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.hero p {
-    font-size: 18px;
+.service-card h4 {
+    color: #198754;
     margin-bottom: 15px;
 }
 
-/* SECTIONS */
-.section {
-    padding: 90px 20px;
-    text-align: center;
+.service-card ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* SERVICES */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+.service-card ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.box {
-    background: white;
-    padding: 35px;
-    width: 260px;
-    border-radius: 12px;
-    font-weight: 600;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.service-card ul li:last-child {
+    border-bottom: none;
 }
 
-.box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* BUTTONS */
-.btn {
-    padding: 12px 30px;
-    font-weight: 600;
-    border-radius: 30px;
-}
-
-/* FOOTER */
 footer {
-    background: #198754;
-    color: white;
+    background: #000;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    padding: 18px;
 }
