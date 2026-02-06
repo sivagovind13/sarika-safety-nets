@@ -1,83 +1,225 @@
-:root {
-    --gold: #C5A059;
-    --navy: #0A0F1A;
-    --navy-light: #121A2B;
-    --white: #F8FAFC;
-    --whatsapp: #25D366;
-    --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-* { margin:0; padding:0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; line-height: 1.6; }
-
-/* --- PREMIUM LOGO DESIGN --- */
-.brand-identity { display: flex; align-items: center; gap: 15px; }
-.logo-shield {
-    width: 45px; height: 45px; background: var(--gold); border-radius: 8px;
-    display: flex; align-items: center; justify-content: center; position: relative;
-    box-shadow: 0 0 25px rgba(197, 160, 89, 0.3);
-}
-.grid-lines {
-    position: absolute; width: 100%; height: 100%;
-    background: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(0,0,0,0.1) 5px);
-}
-.s-letter { font-weight: 800; font-size: 26px; color: var(--navy); position: relative; z-index: 2; }
-.brand-name { font-weight: 700; font-size: 1.2rem; line-height: 1; letter-spacing: 1px; }
-.brand-name span { display: block; font-size: 0.65rem; color: var(--gold); margin-top: 4px; letter-spacing: 2px; }
-
-/* --- HERO & PARALLAX --- */
-.hero { height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
-.hero-parallax {
-    position: absolute; top:0; left:0; width: 100%; height: 100%;
-    background: url('pexels-jan-van-der-wolf-11680885-14806088.jpg') center/cover;
-    transform: scale(1.1);
-    animation: slowZoom 20s infinite alternate;
-}
-@keyframes slowZoom { from { transform: scale(1.1); } to { transform: scale(1); } }
-.hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(10,15,26,0.9), rgba(10,15,26,0.4)); }
-
-.hero-content { position: relative; z-index: 10; max-width: 800px; }
-.eyebrow { color: var(--gold); font-weight: 600; letter-spacing: 4px; display: block; margin-bottom: 1rem; }
-.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; font-weight: 700; margin-bottom: 2rem; }
-.accent-text { color: var(--gold); }
-
-/* --- BUTTONS --- */
-.btn { padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; transition: var(--transition); }
-.btn-gold { background: var(--gold); color: var(--navy); margin-right: 15px; }
-.btn-whatsapp { background: var(--whatsapp); color: white; }
-.btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-
-/* --- SERVICES GRID --- */
-.services-section { padding: 100px 0; background: var(--navy-light); }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
-.s-card {
-    background: rgba(255, 255, 255, 0.03); padding: 20px; border-radius: 12px;
-    margin-bottom: 15px; border-left: 3px solid transparent; transition: var(--transition);
-}
-.s-card:hover { background: rgba(197, 160, 89, 0.1); border-left: 3px solid var(--gold); transform: translateX(10px); }
-
-/* --- EMOTIONAL SECTION (About) --- */
-.about-section { padding: 100px 0; background: var(--navy); }
-.split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.emotional-img {
-    height: 500px; border-radius: 30px;
-    background: url('pexels-suyene-suy-1738614277-28035209.jpg') center/cover;
-    filter: grayscale(30%); box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+/* ================= GLOBAL ================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #1f2933;
 }
 
-/* --- FLOATING ACTIONS --- */
-.floating-contact { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
-.float-btn {
-    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3); transition: var(--transition); color: white; text-decoration: none; font-size: 24px;
+html {
+    scroll-behavior: smooth;
 }
-.whatsapp { background: var(--whatsapp); }
-.call { background: var(--gold); }
-.float-btn:hover { transform: scale(1.1) rotate(10deg); }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 992px) {
-    .split-layout { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 3rem; }
-    .main-nav { display: none; } /* Mobile menu toggle needed for full dev */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.light {
+    background: #ffffff;
+}
+
+.dark {
+    background: #0b1220;
+    color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+}
+
+/* ================= HEADER ================= */
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.logo span {
+    color: #f59e0b;
+}
+
+.nav a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: #1f2933;
+    font-weight: 500;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.55)
+    );
+}
+
+.hero-content {
+    position: relative;
+    color: #ffffff;
+    max-width: 720px;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 34px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.primary {
+    background: #f59e0b;
+    color: #000;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: #000;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    text-align: center;
+    max-width: 850px;
+}
+
+.about h2 {
+    font-size: 2.4rem;
+    margin-bottom: 22px;
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.service-card {
+    background: #111827;
+    padding: 35px;
+    border-radius: 18px;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.service-card h3 {
+    margin-bottom: 18px;
+    color: #f59e0b;
+}
+
+.service-card ul li {
+    list-style: none;
+    margin-bottom: 9px;
+    font-size: 0.95rem;
+}
+
+/* ================= PORTFOLIO ================= */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    height: 220px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0b1220, #1e293b);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #020617;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 0;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #000;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .nav {
+        display: none;
+    }
 }
