@@ -1,50 +1,52 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #333;
-  line-height: 1.7;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 .navbar-brand {
-  color: #0d6efd;
-  letter-spacing: 0.5px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 .nav-link {
-  color: #333;
+  color: #222 !important;
   margin-left: 15px;
 }
 
 .nav-link:hover {
-  color: #0d6efd;
+  color: #ff9800 !important;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("hero.jpg");
-  background-size: cover;
-  background-position: center;
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+  margin: 15px 0 25px;
+  font-size: 18px;
+}
+
+.hero .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
 }
 
 /* SECTIONS */
@@ -54,78 +56,61 @@ body {
 
 .section-title {
   text-align: center;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.section-title::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background: #0d6efd;
-  display: block;
-  margin: 10px auto;
+  margin-bottom: 30px;
 }
 
 .about-text {
   max-width: 900px;
   margin: auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
   text-align: center;
-  font-size: 1.05rem;
 }
 
 /* SERVICES */
 .services-dark {
-  background: #111;
+  background: #0f172a;
   color: #fff;
-  padding: 70px 40px;
+  padding: 80px 0;
 }
 
 .services-dark h4 {
-  color: #ffc107;
+  border-bottom: 2px solid #ff9800;
+  display: inline-block;
+  padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
 .services-dark ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-.services-dark ul li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.services-dark .col-md-3 {
-  padding: 25px;
+.services-dark li {
+  padding: 6px 0;
+  font-size: 15px;
+  color: #ddd;
 }
 
 /* FOOTER */
 .footer {
-  background: #000;
-  color: #bbb;
+  background: #020617;
+  color: #aaa;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 20px;
+  font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 32px;
   }
-
-  .services-dark {
-    text-align: center;
-  }
-
-  .services-dark ul {
-    margin-bottom: 30px;
-  }
-
-  .nav-link {
-    margin-left: 0;
+  .hero p {
+    font-size: 15px;
   }
 }
 
