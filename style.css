@@ -1,83 +1,64 @@
-
-
 export default function SarikaSafetyNets() {
-  const testimonials = [
-    {
-      name: 'Ramesh Kumar',
-      review: 'Very professional installation and excellent quality safety nets. Highly recommended.',
-    },
-    {
-      name: 'Suresh Babu',
-      review: 'Fast service, affordable pricing and premium finishing work.',
-    },
-    {
-      name: 'Priya Apartments',
-      review: 'Best balcony safety net service we used for our apartment project.',
-    },
-  ];
-
-  const faq = [
-    {
-      q: 'How long does installation take?',
-      a: 'Most balcony safety net installations are completed within a few hours.',
-    },
-    {
-      q: 'Are the nets weather resistant?',
-      a: 'Yes. Our safety nets are UV protected and designed for long-term durability.',
-    },
-    {
-      q: 'Do you provide invisible grills?',
-      a: 'Yes. We provide premium invisible grill solutions for homes and apartments.',
-    },
-  ];
-
   const services = [
     {
       title: 'Balcony Safety Nets',
-      desc: 'Premium child safety and fall protection nets for apartments and homes.',
+      desc: 'Premium child safety and balcony protection solutions for homes and apartments.',
     },
     {
       title: 'Bird Protection Nets',
-      desc: 'Strong anti-bird and pigeon safety nets for balconies and open spaces.',
+      desc: 'Strong pigeon and bird protection nets with long-lasting durability.',
     },
     {
       title: 'Construction Safety Nets',
-      desc: 'Heavy-duty industrial safety net installation for construction projects.',
+      desc: 'Industrial safety nets for construction sites and commercial buildings.',
     },
     {
       title: 'Invisible Grills',
-      desc: 'Stylish invisible grill solutions with modern safety protection.',
+      desc: 'Modern invisible grill installation for stylish safety protection.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Ramesh Kumar',
+      review: 'Excellent quality safety nets and professional installation service.',
+    },
+    {
+      name: 'Suresh Babu',
+      review: 'Affordable pricing with premium finishing and fast work.',
+    },
+    {
+      name: 'Priya Apartments',
+      review: 'Very reliable service for apartment balcony safety installations.',
     },
   ];
 
   const gallery = [
+    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop',
   ];
 
   return (
-    <div className="bg-slate-50 text-slate-900 font-sans">
+    <div className="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/80 border-b border-slate-200">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-extrabold tracking-tight">
-              Sarika <span className="text-amber-500">Safety Nets</span>
-            </h1>
-          </div>
+          <h1 className="text-2xl font-extrabold tracking-tight">
+            Sarika <span className="text-amber-500">Safety Nets</span>
+          </h1>
 
           <nav className="hidden md:flex items-center gap-8 font-medium">
-            <a href="#home" className="hover:text-amber-500 transition">Home</a>
-            <a href="#services" className="hover:text-amber-500 transition">Services</a>
-            <a href="#gallery" className="hover:text-amber-500 transition">Gallery</a>
-            <a href="#contact" className="hover:text-amber-500 transition">Contact</a>
+            <a href="#home" className="hover:text-amber-500 transition duration-300">Home</a>
+            <a href="#services" className="hover:text-amber-500 transition duration-300">Services</a>
+            <a href="#gallery" className="hover:text-amber-500 transition duration-300">Gallery</a>
+            <a href="#contact" className="hover:text-amber-500 transition duration-300">Contact</a>
           </nav>
 
           <a
             href="https://wa.me/919999999999"
-            className="bg-amber-500 hover:bg-amber-400 transition text-black px-5 py-3 rounded-full font-semibold shadow-lg"
+            className="bg-amber-500 hover:bg-amber-400 text-black px-5 py-3 rounded-full font-semibold shadow-lg transition duration-300"
           >
             WhatsApp
           </a>
@@ -86,32 +67,29 @@ export default function SarikaSafetyNets() {
 
       {/* HERO */}
       <section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
         id="home"
-        className="relative min-h-screen flex items-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop')",
+              "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000&auto=format&fit=crop')",
           }}
-        />
+        ></div>
 
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-lg text-white mb-6">
-              Trusted Safety Installation Services
+            <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/10 text-white backdrop-blur-md mb-6">
+              Trusted Professional Safety Net Services
             </div>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6">
               Professional
               <span className="text-amber-500"> Safety Nets </span>
-              Installation
+              Installation Services
             </h1>
 
             <p className="text-slate-200 text-lg md:text-xl leading-8 mb-10 max-w-2xl">
@@ -122,14 +100,14 @@ export default function SarikaSafetyNets() {
             <div className="flex flex-col sm:flex-row gap-5">
               <a
                 href="#contact"
-                className="bg-amber-500 hover:bg-amber-400 transition text-black px-8 py-4 rounded-full font-bold text-center shadow-2xl"
+                className="bg-amber-500 hover:bg-amber-400 text-black px-8 py-4 rounded-full font-bold text-center shadow-2xl transition duration-300"
               >
                 Get Free Quote
               </a>
 
               <a
                 href="#services"
-                className="bg-white text-black px-8 py-4 rounded-full font-bold text-center hover:scale-105 transition"
+                className="bg-white hover:bg-slate-100 text-black px-8 py-4 rounded-full font-bold text-center transition duration-300"
               >
                 Explore Services
               </a>
@@ -138,78 +116,32 @@ export default function SarikaSafetyNets() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-white border-y border-slate-200 py-8 px-6">
+      {/* TRUST SECTION */}
+      <section className="bg-white border-y border-slate-200 py-10 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <h3 className="text-3xl font-extrabold text-amber-500">500+</h3>
+            <h3 className="text-4xl font-extrabold text-amber-500">500+</h3>
             <p className="text-slate-600 mt-2">Installations</p>
           </div>
 
           <div>
-            <h3 className="text-3xl font-extrabold text-amber-500">10+</h3>
+            <h3 className="text-4xl font-extrabold text-amber-500">10+</h3>
             <p className="text-slate-600 mt-2">Years Experience</p>
           </div>
 
           <div>
-            <h3 className="text-3xl font-extrabold text-amber-500">24/7</h3>
-            <p className="text-slate-600 mt-2">Customer Support</p>
+            <h3 className="text-4xl font-extrabold text-amber-500">24/7</h3>
+            <p className="text-slate-600 mt-2">Support</p>
           </div>
 
           <div>
-            <h3 className="text-3xl font-extrabold text-amber-500">100%</h3>
-            <p className="text-slate-600 mt-2">Safety Assurance</p>
+            <h3 className="text-4xl font-extrabold text-amber-500">100%</h3>
+            <p className="text-slate-600 mt-2">Customer Satisfaction</p>
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="py-28 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop"
-              alt="Safety Nets"
-              className="rounded-3xl shadow-2xl w-full object-cover h-[500px]"
-            />
-          </div>
-
-          <div>
-            <span className="text-amber-500 font-semibold uppercase tracking-widest">
-              About Us
-            </span>
-
-            <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-8 leading-tight">
-              Premium Safety Solutions For Every Space
-            </h2>
-
-            <p className="text-slate-600 text-lg leading-8 mb-6">
-              We provide durable and affordable safety net installation services
-              for apartments, balconies, windows, construction sites and
-              commercial buildings.
-            </p>
-
-            <p className="text-slate-600 text-lg leading-8 mb-10">
-              Our experienced team ensures professional fitting, strong quality
-              materials and long-lasting protection.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div className="bg-white rounded-3xl shadow-xl p-6 border border-slate-100">
-                <h3 className="text-4xl font-extrabold text-amber-500">500+</h3>
-                <p className="text-slate-600 mt-2">Projects Completed</p>
-              </div>
-
-              <div className="bg-white rounded-3xl shadow-xl p-6 border border-slate-100">
-                <h3 className="text-4xl font-extrabold text-amber-500">100%</h3>
-                <p className="text-slate-600 mt-2">Customer Satisfaction</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-          {/* SERVICES */}
+      {/* SERVICES */}
       <section id="services" className="py-28 bg-slate-950 text-white px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -218,12 +150,12 @@ export default function SarikaSafetyNets() {
             </span>
 
             <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6">
-              Safety Services We Provide
+              Safety Solutions We Provide
             </h2>
 
             <p className="text-slate-400 max-w-3xl mx-auto text-lg leading-8">
-              Reliable safety solutions designed for homes, apartments,
-              buildings and construction projects.
+              Reliable and premium safety net installation services for homes,
+              apartments and commercial spaces.
             </p>
           </div>
 
@@ -231,13 +163,13 @@ export default function SarikaSafetyNets() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-amber-500 hover:-translate-y-3 transition duration-300 backdrop-blur-xl"
+                className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-amber-500 hover:-translate-y-3 transition duration-300"
               >
                 <div className="w-16 h-16 rounded-2xl bg-amber-500 flex items-center justify-center text-black text-2xl font-bold mb-6">
                   {index + 1}
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-amber-500 transition">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-amber-500 transition duration-300">
                   {service.title}
                 </h3>
 
@@ -251,7 +183,7 @@ export default function SarikaSafetyNets() {
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="py-28 px-6">
+      <section id="gallery" className="py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-amber-500 uppercase tracking-widest font-semibold">
@@ -297,10 +229,10 @@ export default function SarikaSafetyNets() {
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl"
+                className="bg-white/5 border border-white/10 rounded-3xl p-8"
               >
-                <div className="flex gap-1 mb-6 text-amber-400">
-                  <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
+                <div className="text-amber-400 text-xl mb-6">
+                  ⭐ ⭐ ⭐ ⭐ ⭐
                 </div>
 
                 <p className="text-slate-300 leading-8 mb-6">
@@ -310,38 +242,6 @@ export default function SarikaSafetyNets() {
                 <h3 className="font-bold text-xl text-white">
                   {item.name}
                 </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-28 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-amber-500 uppercase tracking-widest font-semibold">
-              FAQ
-            </span>
-
-            <h2 className="text-4xl md:text-5xl font-extrabold mt-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {faq.map((item, index) => (
-              <div
-                key={index}
-                className="bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm"
-              >
-                <h3 className="text-2xl font-bold mb-4 text-slate-900">
-                  {item.q}
-                </h3>
-
-                <p className="text-slate-600 leading-8">
-                  {item.a}
-                </p>
               </div>
             ))}
           </div>
@@ -361,7 +261,7 @@ export default function SarikaSafetyNets() {
 
           <p className="text-slate-600 text-lg leading-8 max-w-3xl mx-auto mb-12">
             Contact us today for affordable pricing, professional installation
-            and fast service.
+            and quick service.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -372,7 +272,7 @@ export default function SarikaSafetyNets() {
 
             <div className="bg-white rounded-3xl p-8 shadow-xl">
               <h3 className="text-2xl font-bold mb-4">WhatsApp</h3>
-              <p className="text-slate-600">Quick Response Support</p>
+              <p className="text-slate-600">Quick Customer Support</p>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-xl">
@@ -398,114 +298,15 @@ export default function SarikaSafetyNets() {
         </div>
       </footer>
 
-      {/* FLOATING BUTTON */}
+      {/* FLOATING WHATSAPP BUTTON */}
       <a
         href="https://wa.me/919999999999"
-        className="fixed bottom-6 right-6 bg-green-500 hover:scale-110 transition text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50"
+        className="fixed bottom-6 right-6 bg-green-500 hover:scale-110 transition duration-300 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50"
       >
         💬
       </a>
     </div>
   );
 }
-
-    background: #25D366;
-    color: #000;
-}
-
-/* ================= ABOUT ================= */
-.about {
-    text-align: center;
-    max-width: 850px;
-}
-
-.about h2 {
-    font-size: 2.4rem;
-    margin-bottom: 22px;
-}
-
-/* ================= SERVICES ================= */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
-}
-
-.service-card {
-    background: #111827;
-    padding: 35px;
-    border-radius: 18px;
-    transition: all 0.35s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-}
-
-.service-card h3 {
-    margin-bottom: 18px;
-    color: #f59e0b;
-}
-
-.service-card ul li {
-    list-style: none;
-    margin-bottom: 9px;
-    font-size: 0.95rem;
-}
-
-/* ================= PORTFOLIO ================= */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.portfolio-item {
-    height: 220px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #0b1220, #1e293b);
-}
-
-/* ================= CONTACT ================= */
-.contact {
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.4rem;
-    margin-bottom: 25px;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    background: #020617;
-    color: #ffffff;
-    text-align: center;
-    padding: 22px 0;
-}
-
-/* ================= WHATSAPP FLOAT ================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #25D366;
-    color: #000;
-    padding: 14px 22px;
-    border-radius: 50px;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.6rem;
-    }
-
-    .nav {
-        display: none;
     }
 }
